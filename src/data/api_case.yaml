@@ -1,0 +1,18 @@
+-
+  name: 正确密码登录
+  url: http://127.0.0.1:8888/login
+  method: POST
+  data: {
+   username: midnight_sun,
+   pwd: qgy
+  }
+  expect: {code: 200, message: 登录成功}
+-
+  name: 错误密码登录
+  url: http://127.0.0.1:8888/login
+  method: POST
+  data: {
+    username: midnight,
+    pwd: qgy
+  }
+  expect: {code: -1, message: 账号密码错误}
